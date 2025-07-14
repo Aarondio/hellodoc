@@ -34,11 +34,13 @@ class Appointment extends Model
         return $this->belongsTo(Timeslot::class);
     }
 
-    public function user(){
+    public function user()
+    {
         return $this->belongsTo(User::class);
     }
 
-    public function doctor(){
+    public function doctor()
+    {
         return $this->belongsTo(Doctor::class);
     }
 
@@ -49,6 +51,7 @@ class Appointment extends Model
             'appointment_time' => 'datetime:H:i',
         ];
     }
+
     // public function appointment(){
     //     return $this->hasMany(Appointment::class);
     // }
